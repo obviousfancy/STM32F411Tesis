@@ -1,0 +1,4 @@
+../Core/Src/demo_i2s.c:136:6:Demo_I2S_Init	7
+../Core/Src/demo_i2s.c:143:6:Demo_I2S_Start	4
+../Core/Src/demo_i2s.c:166:6:Demo_I2S_Stop	2
+../Core/Src/demo_i2s.c:174:15:Demo_I2S_GetActiveSignal	1

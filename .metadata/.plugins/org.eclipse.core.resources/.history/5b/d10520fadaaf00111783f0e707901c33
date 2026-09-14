@@ -1,0 +1,4 @@
+../Core/Src/bm_synthesis.c:16:13:BM01_Sawtooth_Run	6
+../Core/Src/bm_synthesis.c:69:13:BM02_Square_Run	9
+../Core/Src/bm_synthesis.c:124:13:BM03_Triangle_Run	5
+../Core/Src/bm_synthesis.c:182:13:BM04_Sine_Run	4

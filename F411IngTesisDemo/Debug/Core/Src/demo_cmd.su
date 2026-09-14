@@ -1,0 +1,2 @@
+../Core/Src/demo_cmd.c:39:6:DemoCmd_Init	8	static
+../Core/Src/demo_cmd.c:47:6:DemoCmd_Poll	8	static

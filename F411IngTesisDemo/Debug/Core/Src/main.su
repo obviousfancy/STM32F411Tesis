@@ -1,0 +1,4 @@
+../Core/Src/main.c:51:6:Debug_ClockCheck	8	static
+../Core/Src/main.c:209:6:SystemClock_Config	88	static,ignoring_inline_asm
+../Core/Src/main.c:114:5:main	128	static,ignoring_inline_asm
+../Core/Src/main.c:373:6:Error_Handler	0	static,ignoring_inline_asm
