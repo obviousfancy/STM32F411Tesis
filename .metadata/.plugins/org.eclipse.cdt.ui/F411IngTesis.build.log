@@ -1,0 +1,10 @@
+11:35:32 **** Incremental Build of configuration Debug for project F411IngTesis ****
+make -j16 all 
+arm-none-eabi-size  F411IngTesis.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 179640	    472	   3088	 183200	  2cba0	F411IngTesis.elf
+Finished building: default.size.stdout
+ 
+
+11:35:32 Build Finished. 0 errors, 0 warnings. (took 233ms)
+
