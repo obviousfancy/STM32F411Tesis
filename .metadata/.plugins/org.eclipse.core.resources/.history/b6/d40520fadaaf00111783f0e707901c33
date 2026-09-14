@@ -1,4 +1,0 @@
-../Core/Src/bm_synthesis.c:16:13:BM01_Sawtooth_Run	1560	static
-../Core/Src/bm_synthesis.c:69:13:BM02_Square_Run	1544	static
-../Core/Src/bm_synthesis.c:124:13:BM03_Triangle_Run	1536	static
-../Core/Src/bm_synthesis.c:182:13:BM04_Sine_Run	1560	static

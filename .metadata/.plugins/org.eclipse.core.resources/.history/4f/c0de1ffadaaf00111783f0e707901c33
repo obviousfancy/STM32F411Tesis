@@ -1,4 +1,0 @@
-../Core/Src/bm_filters.c:62:13:BM08a_FIR_F32_Run	5
-../Core/Src/bm_filters.c:110:13:BM08b_FIR_Q15_Run	4
-../Core/Src/bm_filters.c:162:13:BM09a_IIR_F32_Run	5
-../Core/Src/bm_filters.c:217:13:BM09b_IIR_Q15_Run	5

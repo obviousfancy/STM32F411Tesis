@@ -1,4 +1,4 @@
-21:39:04 **** Incremental Build of configuration Debug for project F411IngTesisDemo ****
+22:45:02 **** Incremental Build of configuration Debug for project F411IngTesisDemo ****
 make -j12 all 
 arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -DARM_MATH_CM4 -c -I../Core/Inc -I"F:/Documentos/Proyectos/STM32F411Tesis/F411IngTesisDemo/Drivers/CMSIS/DSP/PrivateInclude" -I"F:/Documentos/Proyectos/STM32F411Tesis/F411IngTesisDemo/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
 arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -DARM_MATH_CM4 -c -I../Core/Inc -I"F:/Documentos/Proyectos/STM32F411Tesis/F411IngTesisDemo/Drivers/CMSIS/DSP/PrivateInclude" -I"F:/Documentos/Proyectos/STM32F411Tesis/F411IngTesisDemo/Drivers/CMSIS/DSP/Include" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O2 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
@@ -511,11 +511,11 @@ Finished building target: F411IngTesisDemo.elf
 arm-none-eabi-size  F411IngTesisDemo.elf 
 arm-none-eabi-objdump -h -S F411IngTesisDemo.elf  > "F411IngTesisDemo.list"
    text	   data	    bss	    dec	    hex	filename
- 183008	    476	  36920	 220404	  35cf4	F411IngTesisDemo.elf
+ 183304	    476	  45112	 228892	  37e1c	F411IngTesisDemo.elf
 Finished building: default.size.stdout
  
 Finished building: F411IngTesisDemo.list
  
 
-21:39:16 Build Finished. 0 errors, 2 warnings. (took 12s.173ms)
+22:45:18 Build Finished. 0 errors, 2 warnings. (took 15s.447ms)
 

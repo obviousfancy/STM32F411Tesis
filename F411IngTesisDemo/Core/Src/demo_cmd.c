@@ -22,17 +22,32 @@ static void DemoCmd_PrintLine(const char *s)
 
 static void DemoCmd_Execute(const char *line)
 {
-    if (strcmp(line, "demo bm04") == 0) {
+    if (strcmp(line, "demo bm01") == 0) {
+        Demo_I2S_Start(DEMO_SIGNAL_BM01_SAWTOOTH);
+        DemoCmd_PrintLine("-> demo bm01 (diente de sierra 441 Hz)\r\n");
+    } else if (strcmp(line, "demo bm02") == 0) {
+        Demo_I2S_Start(DEMO_SIGNAL_BM02_SQUARE);
+        DemoCmd_PrintLine("-> demo bm02 (onda cuadrada 441 Hz)\r\n");
+    } else if (strcmp(line, "demo bm03") == 0) {
+        Demo_I2S_Start(DEMO_SIGNAL_BM03_TRIANGLE);
+        DemoCmd_PrintLine("-> demo bm03 (onda triangular 441 Hz)\r\n");
+    } else if (strcmp(line, "demo bm04") == 0) {
         Demo_I2S_Start(DEMO_SIGNAL_BM04_SINE);
         DemoCmd_PrintLine("-> demo bm04 (senoidal 441 Hz)\r\n");
     } else if (strcmp(line, "demo bm08") == 0) {
         Demo_I2S_Start(DEMO_SIGNAL_BM08_FIR);
-        DemoCmd_PrintLine("-> demo bm08 (ruido filtrado FIR)\r\n");
+        DemoCmd_PrintLine("-> demo bm08 (ruido filtrado FIR, fc=4kHz)\r\n");
+    } else if (strcmp(line, "demo bm09") == 0) {
+        Demo_I2S_Start(DEMO_SIGNAL_BM09_IIR);
+        DemoCmd_PrintLine("-> demo bm09 (ruido filtrado IIR, fc=4kHz)\r\n");
+    } else if (strcmp(line, "demo noise") == 0) {
+        Demo_I2S_Start(DEMO_SIGNAL_BM08_RAW_NOISE);
+        DemoCmd_PrintLine("-> demo noise (mismo ruido de bm08/bm09, SIN filtrar -- referencia A/B/C)\r\n");
     } else if (strcmp(line, "benchmark") == 0) {
         Demo_I2S_Stop();
         DemoCmd_PrintLine("-> benchmark (I2S detenido; BM01-BM10 solo corren al arrancar)\r\n");
     } else if (line[0] != '\0') {
-        DemoCmd_PrintLine("comandos: demo bm04 | demo bm08 | benchmark\r\n");
+        DemoCmd_PrintLine("comandos: demo bm01 | demo bm02 | demo bm03 | demo bm04 | demo bm08 | demo bm09 | demo noise | benchmark\r\n");
     }
 }
 
@@ -41,7 +56,7 @@ void DemoCmd_Init(void)
     Demo_I2S_Init();
     cmd_len = 0U;
     memset(cmd_buf, 0, sizeof(cmd_buf));
-    DemoCmd_PrintLine("\r\nDemo listo. Comandos: demo bm04 | demo bm08 | benchmark\r\n");
+    DemoCmd_PrintLine("\r\nDemo listo. Comandos: demo bm01 | demo bm02 | demo bm03 | demo bm04 | demo bm08 | demo bm09 | demo noise | benchmark\r\n");
 }
 
 void DemoCmd_Poll(void)

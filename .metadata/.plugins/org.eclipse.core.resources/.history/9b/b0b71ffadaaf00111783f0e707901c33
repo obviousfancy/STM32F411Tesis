@@ -1,6 +1,0 @@
-../Core/Src/bm_fft.c:49:13:BM05a_FFT64_F32_Run	5
-../Core/Src/bm_fft.c:121:13:BM05b_FFT64_Q15_Run	9
-../Core/Src/bm_fft.c:221:13:BM06a_FFT128_F32_Run	5
-../Core/Src/bm_fft.c:280:13:BM06b_FFT128_Q15_Run	9
-../Core/Src/bm_fft.c:376:13:BM07a_FFT256_F32_Run	5
-../Core/Src/bm_fft.c:435:13:BM07b_FFT256_Q15_Run	9

@@ -4,10 +4,10 @@
  *
  * NO forma parte de la fase de benchmarks (no usa DWT, no toca
  * benchmark_config.h). Reproduce en loop continuo, via DMA circular
- * sobre hi2s1/SPI1, una senal equivalente a BM04 (senoidal) o a BM08
- * (ruido blanco filtrado FIR paso-bajo), regenerada localmente en este
- * modulo porque bm_synthesis.c/bm_filters.c no exponen sus buffers ni
- * sus coeficientes fuera de esos archivos.
+ * sobre hi2s1/SPI1, senales equivalentes a BM01-BM04 (sintesis) y a
+ * BM08/BM09 (ruido blanco crudo vs filtrado FIR/IIR), regeneradas
+ * localmente en este modulo porque bm_synthesis.c/bm_filters.c no
+ * exponen sus buffers ni sus coeficientes fuera de esos archivos.
  */
 
 #ifndef DEMO_I2S_H
@@ -17,11 +17,16 @@
 
 typedef enum {
     DEMO_SIGNAL_NONE = 0,
+    DEMO_SIGNAL_BM01_SAWTOOTH,
+    DEMO_SIGNAL_BM02_SQUARE,
+    DEMO_SIGNAL_BM03_TRIANGLE,
     DEMO_SIGNAL_BM04_SINE,
     DEMO_SIGNAL_BM08_FIR,
+    DEMO_SIGNAL_BM08_RAW_NOISE,  /* mismo ruido de BM08/BM09, SIN filtrar -- referencia A/B */
+    DEMO_SIGNAL_BM09_IIR,
 } Demo_Signal_t;
 
-/* Pre-genera los buffers de audio (sine + FIR-noise). No toca el I2S.
+/* Pre-genera todos los buffers de audio. No toca el I2S.
  * Llamar una sola vez, despues de MX_I2S1_Init(). */
 void Demo_I2S_Init(void);
 
